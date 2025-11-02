@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "prompts_evaluated": 2,
+    "certified_all": true,
+    "certified_any": true,
+    "certified_prompts": 2,
+    "failed_prompts": 0,
+    "extraction_error_stats_certified": {
+      "mean": 2.3156591142047466e-07,
+      "std": 5.474049233757885e-09
+    },
+    "activation_coverage_stats_certified": {
+      "mean": 0.9999999999998883,
+      "std": 8.049308344019231e-15
+    },
+    "extraction_error_stats_overall": {
+      "mean": 2.3156591142047466e-07,
+      "std": 5.474049233757885e-09
+    },
+    "activation_coverage_stats_overall": {
+      "mean": 0.9999999999998883,
+      "std": 8.049308344019231e-15
+    },
+    "conditions_met_all": [
+      "attention margins >= 0.000",
+      "head_0 W_k spectra distinct",
+      "head_0 W_q spectra distinct",
+      "head_1 W_k spectra distinct",
+      "head_1 W_q spectra distinct",
+      "head_10 W_k spectra distinct",
+      "head_10 W_q spectra distinct",
+      "head_11 W_k spectra distinct",
+      "head_11 W_q spectra distinct",
+      "head_2 W_k spectra distinct",
+      "head_2 W_q spectra distinct",
+      "head_3 W_k spectra distinct",
+      "head_3 W_q spectra distinct",
+      "head_4 W_k spectra distinct",
+      "head_4 W_q spectra distinct",
+      "head_5 W_k spectra distinct",
+      "head_5 W_q spectra distinct",
+      "head_6 W_k spectra distinct",
+      "head_6 W_q spectra distinct",
+      "head_7 W_k spectra distinct",
+      "head_7 W_q spectra distinct",
+      "head_8 W_k spectra distinct",
+      "head_8 W_q spectra distinct",
+      "head_9 W_k spectra distinct",
+      "head_9 W_q spectra distinct",
+      "output projection well-conditioned (\u03c3_min = 2.44e-04)"
+    ],
+    "conditions_violated_union": [],
+    "errors": [
+      2.2609186218671678e-07,
+      2.3703996065423255e-07
+    ],
+    "activation_coverages": [
+      0.9999999999998963,
+      0.9999999999998802
+    ]
+  },
+  "per_prompt": [
+    {
+      "prompt": "The reversible thought foundry extracts neural mechanisms.",
+      "certified": true,
+      "extraction_error": 2.2609186218671678e-07,
+      "activation_coverage": 0.9999999999998963,
+      "conditions_met": [
+        "head_0 W_q spectra distinct",
+        "head_0 W_k spectra distinct",
+        "head_1 W_q spectra distinct",
+        "head_1 W_k spectra distinct",
+        "head_2 W_q spectra distinct",
+        "head_2 W_k spectra distinct",
+        "head_3 W_q spectra distinct",
+        "head_3 W_k spectra distinct",
+        "head_4 W_q spectra distinct",
+        "head_4 W_k spectra distinct",
+        "head_5 W_q spectra distinct",
+        "head_5 W_k spectra distinct",
+        "head_6 W_q spectra distinct",
+        "head_6 W_k spectra distinct",
+        "head_7 W_q spectra distinct",
+        "head_7 W_k spectra distinct",
+        "head_8 W_q spectra distinct",
+        "head_8 W_k spectra distinct",
+        "head_9 W_q spectra distinct",
+        "head_9 W_k spectra distinct",
+        "head_10 W_q spectra distinct",
+        "head_10 W_k spectra distinct",
+        "head_11 W_q spectra distinct",
+        "head_11 W_k spectra distinct",
+        "attention margins >= 0.000",
+        "output projection well-conditioned (\u03c3_min = 2.44e-04)"
+      ],
+      "conditions_violated": [],
+      "ln_input_mean": -0.0053830095018670195,
+      "ln_input_std": 0.10826907594520624,
+      "q_norm_stats": {
+        "mean": 7.431167552549183,
+        "std": 2.181181363573124,
+        "min": 4.300334659416935,
+        "max": 13.428219578701366
+      },
+      "k_norm_stats": {
+        "mean": 10.257105738981013,
+        "std": 3.1209076812813694,
+        "min": 5.47182020468327,
+        "max": 22.330374723184775
+      },
+      "v_norm_stats": {
+        "mean": 1.7136989659803434,
+        "std": 0.4887397890587383,
+        "min": 0.9300490593857336,
+        "max": 3.9516057619456366
+      },
+      "attention_margin_min": 0.01741395312486138,
+      "attention_margin_mean": 0.46027724330267605,
+      "replay_l1_mean": 2.2609186218671678e-07,
+      "replay_l2_mean": 5.14393685401428e-07,
+      "replay_abs_max": 8.338557050180384e-06,
+      "unit_norm_replay_l1_mean": 0.14337806634453462,
+      "unit_norm_replay_l2_mean": 0.3746340533858077,
+      "unit_norm_replay_abs_max": 8.551562179634132
+    },
+    {
+      "prompt": "Safety teams review RTF certificates before deployment to production copilots.",
+      "certified": true,
+      "extraction_error": 2.3703996065423255e-07,
+      "activation_coverage": 0.9999999999998802,
+      "conditions_met": [
+        "head_0 W_q spectra distinct",
+        "head_0 W_k spectra distinct",
+        "head_1 W_q spectra distinct",
+        "head_1 W_k spectra distinct",
+        "head_2 W_q spectra distinct",
+        "head_2 W_k spectra distinct",
+        "head_3 W_q spectra distinct",
+        "head_3 W_k spectra distinct",
+        "head_4 W_q spectra distinct",
+        "head_4 W_k spectra distinct",
+        "head_5 W_q spectra distinct",
+        "head_5 W_k spectra distinct",
+        "head_6 W_q spectra distinct",
+        "head_6 W_k spectra distinct",
+        "head_7 W_q spectra distinct",
+        "head_7 W_k spectra distinct",
+        "head_8 W_q spectra distinct",
+        "head_8 W_k spectra distinct",
+        "head_9 W_q spectra distinct",
+        "head_9 W_k spectra distinct",
+        "head_10 W_q spectra distinct",
+        "head_10 W_k spectra distinct",
+        "head_11 W_q spectra distinct",
+        "head_11 W_k spectra distinct",
+        "attention margins >= 0.000",
+        "output projection well-conditioned (\u03c3_min = 2.44e-04)"
+      ],
+      "conditions_violated": [],
+      "ln_input_mean": -0.005431199354134043,
+      "ln_input_std": 0.11053739359887671,
+      "q_norm_stats": {
+        "mean": 7.592527955968899,
+        "std": 2.1833675622534248,
+        "min": 4.086599958195735,
+        "max": 14.679089882157465
+      },
+      "k_norm_stats": {
+        "mean": 10.798285168309135,
+        "std": 3.355452530602487,
+        "min": 5.470616103429017,
+        "max": 23.96776105390074
+      },
+      "v_norm_stats": {
+        "mean": 1.7776818379278543,
+        "std": 0.496223256199591,
+        "min": 0.8423818779037435,
+        "max": 4.03513667107366
+      },
+      "attention_margin_min": 0.0002809881772136702,
+      "attention_margin_mean": 0.3909989127419275,
+      "replay_l1_mean": 2.3703996065423255e-07,
+      "replay_l2_mean": 5.772091686256675e-07,
+      "replay_abs_max": 1.2356737677521323e-05,
+      "unit_norm_replay_l1_mean": 0.16175476409382025,
+      "unit_norm_replay_l2_mean": 0.41016558950500426,
+      "unit_norm_replay_abs_max": 8.190787466227048
+    }
+  ]
+}

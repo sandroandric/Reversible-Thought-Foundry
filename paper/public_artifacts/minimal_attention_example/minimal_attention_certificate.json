@@ -1,0 +1,59 @@
+{
+  "operation": "extract",
+  "timestamp": 1762097553.869612,
+  "contract": {
+    "preconditions": [
+      "Input shape matches declared domain",
+      "Weights are finite and non-NaN",
+      "Layer norm applied to inputs"
+    ],
+    "postconditions": [
+      "Extraction error <= 0.0000",
+      "Coverage >= 100.00%",
+      "Identifiability conditions met"
+    ],
+    "invariants": [
+      "Output shape preserved",
+      "Gradient norms bounded"
+    ],
+    "resource_budget": null
+  },
+  "epsilon_bound": {
+    "extract": 3.573518703888748e-09,
+    "quant": 0.0,
+    "interp": 0.001,
+    "total": 0.0010000035735187038
+  },
+  "coverage": {
+    "activation_coverage": 0.9999999999999968,
+    "path_coverage": 0.9999999999999968,
+    "loss_coverage": 0.8
+  },
+  "identifiability": {
+    "is_identifiable": true,
+    "conditions_met": [
+      "W_q has distinct top singular values",
+      "W_k has distinct top singular values",
+      "Margin separation >= 0.100"
+    ],
+    "conditions_violated": [],
+    "has_counterexample": false
+  },
+  "resources": {
+    "flops": 0,
+    "bytes": 0
+  },
+  "test_seeds": [
+    42,
+    123,
+    789
+  ],
+  "content_hashes": {
+    "weights": "b1c89401d1aab126",
+    "probes": "c2e2500526f97861"
+  },
+  "proof_script": "% LF Proof for Extraction\n% =============================\n\n% Lemma: Round-trip extraction preserves semantics within \u03b5\nlemma extract_equiv :\n  \u2200 x \u2208 Dom, |Neural(x) - IR(Extract(Neural))(x)| \u2264 \u03b5_extract\n\nproof:\n  1. Identifiability conditions satisfied\n  2. Coverage >= 90%\n  3. Residual measured: 0.0000\n  4. By definition of \u03b5_extract\n  QED",
+  "metadata": {
+    "cert_id": "extract_0"
+  }
+}

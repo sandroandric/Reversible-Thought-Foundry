@@ -1,0 +1,68 @@
+{
+  "certificate_type": "extraction",
+  "mechanism": "multihead_attention",
+  "identifier": "trained_multihead_attention_64d",
+  "epsilon_bound": {
+    "extract": 9.094045057121983e-08,
+    "quant": 1.5e-05,
+    "interpret": 3.6e-05,
+    "total": 5.109094045057122e-05
+  },
+  "coverage": {
+    "activation_coverage": 0.9999999999999837,
+    "path_coverage": 0.94,
+    "loss_coverage": 0.9
+  },
+  "identifiability": {
+    "certified": true,
+    "conditions_met": [
+      "head_0 W_q spectra distinct",
+      "head_0 W_k spectra distinct",
+      "head_1 W_q spectra distinct",
+      "head_1 W_k spectra distinct",
+      "head_2 W_q spectra distinct",
+      "head_2 W_k spectra distinct",
+      "head_3 W_q spectra distinct",
+      "head_3 W_k spectra distinct",
+      "attention margins >= 0.001",
+      "output projection well-conditioned (\u03c3_min = 5.21e-01)"
+    ],
+    "conditions_violated": [],
+    "margin_threshold": 0.0008,
+    "singular_gap": 0.005,
+    "layer_norm_bounds": {
+      "variance": [
+        0.8,
+        1.2
+      ],
+      "l2_norm": [
+        0.5,
+        2.0
+      ]
+    }
+  },
+  "hashes": {
+    "weights": "sha256:489da061a1ec3346e8f8abe0568d41b7d4817ee6b6493208b33ff16023d1b6c6",
+    "probes": "sha256:d225bc2804ba9c728d15f98a2a6559be99384f5bb84b741c1cab38f30c3bbb18",
+    "mask": "sha256:19361f835a9ed05d40f0194a5d5b78369c792b5438dd907fea0353d28d14d5a4",
+    "bias": "sha256:f88b04681f4b436784bf857d5bfffdb5c02a7fec07ce5cb11b37035d8d813ce8"
+  },
+  "timestamp": 1762080500.5789068,
+  "tool_version": "rtf-extractor 2.2.0",
+  "metadata": {
+    "test_seeds": [
+      42,
+      123,
+      789
+    ],
+    "resources": {
+      "flops": 0,
+      "bytes": 0
+    },
+    "proof_script": "% LF Proof for Extraction\n% =============================\n\n% Lemma: Round-trip extraction preserves semantics within \u03b5\nlemma extract_equiv :\n  \u2200 x \u2208 Dom, |Neural(x) - IR(Extract(Neural))(x)| \u2264 \u03b5_extract\n\nproof:\n  1. Identifiability conditions satisfied\n  2. Coverage >= 90%\n  3. Residual measured: 0.0000\n  4. By definition of \u03b5_extract\n  QED",
+    "kappa_locality": "<= 2.5e-3",
+    "dkcheck_exit_code": 0
+  },
+  "tolerance_budget_fp32": 9.5367431640625e-07,
+  "tolerance_budget_fp64": 3.552713678800501e-15
+}
